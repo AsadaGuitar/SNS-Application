@@ -1,0 +1,1275 @@
+@charset "UTF-8";
+
+$color-white:  #ebebeb;
+$color-pink: #F5D1CA;
+$blue-out: -2px -2px 5px rgba(255, 255, 255, 1), 2.5px 2.5px 5px rgba(0, 0, 0, 0.1);
+$white-out: 3px 3px 8px #d4d4d4, -3px -3px 8px #ffffff;
+$white-in: inset 3px 3px 8px #d4d4d4, inset -3px -3px 8px #ffffff;
+
+
+body{
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	background-color: $color-white;
+	#left-body{
+		width: 77%;
+		height: 700px;
+		display: flex;
+		#select-icon{
+			width: 20%;
+			height: 90%;
+			margin-top: 5%;
+			display: flex;
+			flex-direction: column;
+			//background-color: #ebf5fc;
+			//border-right: solid thin silver;
+			.icon{
+				width: 70px;
+				height: 70px;
+				margin-left: 30%;
+				margin-top: 20%;
+				//border: solid thin silver;
+				background-color: $color-white;
+				//background: linear-gradient(165deg, #ffe0d8, #ddbcb6);
+				border-radius: 50%;
+				//box-shadow: -2px -2px 5px #fff0e8, 2px 2px 5px #d0b2ac;
+				box-shadow: $white-out;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				i{
+					font-size: 20px;
+					color: gray;
+					pointer-events: none;
+				}
+			}
+		}
+	    .main{
+	    	width: 80%;
+	    	height: 100%;
+	    	display: flex;
+	    	flex-direction: column;
+	    	#home-header{
+				width: 70%;
+				height: 15%;
+				margin: auto;
+				position: relative;
+
+				#home-title{
+					width: 400px;
+					height: 60px;
+					position: absolute;
+					transform: translateX(-50%);
+				    top: 40px;
+					left: 50%;
+					border-radius: 0.6em;
+					box-shadow: inset 2px 2px 4px 0 #cacbce, inset -2px -2px 4px #ffffff;
+					display: flex;
+	    		    justify-content: center;
+					align-items: center;
+					p{
+						display: inline-block;
+	    			    font-size: 38px;
+						color: #c2c2c2;
+
+					}
+				}
+				.home-btn{
+					width: 60px;
+					height: 60px;
+					position: absolute;
+					top: 40px;
+					left: 90%;
+					border-radius: 50%;
+					box-shadow:  -2px -2px 5px rgba(255, 255, 255, 1), 2.5px 2.5px 5px rgba(0, 0, 0, 0.1);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					i{
+						display: inline-block;
+						font-size: 16px;
+						color: gray;
+						pointer-events: none;
+					}
+				}
+
+	    	}
+	        #repentance-header{
+				width: 100%;
+	        	height: 20%;
+	        	display: flex;
+	    		justify-content: center;
+				align-items: center;
+				#bell-title{
+					width: 280px;
+					height: 60px;
+					border-radius: 1.8em;
+					box-shadow: inset 2px 2px 4px 0 #cacbce, inset -2px -2px 4px #ffffff;
+					display: flex;
+	    		    justify-content: center;
+					align-items: center;
+					.title{
+	        		    display: inline-block;
+	    			    font-size: 38px;
+	    			    color: #c2c2c2;
+	        	    }
+				}
+	        }
+	        #friends-header{
+				width: 100%;
+	        	height: 20%;
+				position: relative;
+	        	#friends-title{
+					width: 200px;
+					height: 60px;
+					position: absolute;
+					transform: translate(-50%, -50%);
+					top: 70%;
+					left: 30%;
+					border-radius: 1.8em;
+					box-shadow: inset 2px 2px 4px 0 #cacbce, inset -2px -2px 4px #ffffff;
+	        		font-size: 32px;
+					color: silver;
+					display: flex;
+	    		    justify-content: center;
+				    align-items: center;
+	        	}
+	            #friends-form{
+					position: absolute;
+					display: flex;
+					top: 65%;
+	            	left: 65%;
+	            	.search{
+						width: 70%;
+						height: 20px;
+						background-color: $color-white;
+						border:  0.1px solid $color-white;
+						border-radius: 0.5em;
+						padding-top: 3px;
+						padding-left: 4%;
+						color: firebrick;
+						box-shadow: inset 2px 2px 4px 0 #cacbce, inset -2px -2px 4px #ffffff;
+					}
+	                .button{
+						margin-top: 2%;
+						margin-left: 5%;
+						width: 30%;
+						height: 20px;
+						font-size: 12px;
+						border-radius: 1em;
+						border:  0.1px solid $color-white;
+						box-shadow: -2px -2px 4px rgba(255, 255, 255, 1), 2px 2px 4px rgba(0, 0, 0, 0.1);
+	                }
+	            }
+			}
+	        #home-contents{
+				width: 100%;
+	        	height: 70%;
+				margin-top: 40px;
+				overflow: visible;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				.thread{
+					width: 70%;
+					height: 100px;
+					margin: 20px auto 0;
+					//margin-right: 10px;
+					/*border-radius: 0.5em;
+					box-shadow:  -2px -2px 5px rgba(255, 255, 255, 1), 2.5px 2.5px 5px rgba(0, 0, 0, 0.1);*/
+					position: relative;
+					#threadSubmit{
+						//display: none;
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						background-color: $color-white;
+						border: thin solid $color-white;
+						border-radius: 0.5em;
+						box-shadow:  -2px -2px 5px rgba(255, 255, 255, 1), 2.5px 2.5px 5px rgba(0, 0, 0, 0.1);
+						z-index: 0;
+					}
+					div{
+						color: gray;
+					}
+					.threadName{
+						position: absolute;
+						display: inline-block;
+						text-align: center;
+						top: 10%;
+						left: 5%;
+						pointer-events: none;
+						cursor: pointer;
+						z-index: 1;
+						color: $color-white;
+					}
+					.threadDate{
+						position: absolute;
+						display: inline-block;
+						text-align: center;
+						top: 8%;
+						left: 85%;
+						pointer-events: none;
+						cursor: pointer;
+						z-index: 1;
+					}
+					.threadTitle{
+						position: absolute;
+						transform: translate(-50%, -50%);
+						display: inline-block;
+						text-align: center;
+						/*width: 50%;
+						height: 10%;*/
+						left: 50%;
+						top: 50%;
+						pointer-events: none;
+						cursor: pointer;
+						position: relative;
+						font-size: 20px;
+						z-index: 1;
+					}
+				}
+			}
+			#openThread-contents{
+				width: 100%;
+	        	height: 100%;
+				margin: 40px auto 0;
+				display: flex;
+				flex-direction: column;
+				position: relative;
+				#exit_open_thread{
+					#exit_open_thread_submit{
+						position: absolute;
+						display: inline-block;
+						width: 30px;
+						height: 30px;
+						left: 82%;
+						background-color: $color-white;
+						border: thin solid $color-white;
+						font-size: 30px;
+						color: gray;
+					}
+				}
+				#openThread-title{
+					width: 60%;
+					height: 60px;
+					margin: 10px auto 0;
+					border-radius: 0.3em;
+					box-shadow: inset 2px 2px 4px 0 #cacbce, inset -2px -2px 4px #ffffff;
+
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					p{
+						display: inline-block;
+						font-size: 20px;
+						color: gray;
+					}
+				}
+				#openThread-comment{
+					width: 60%;
+					height: 350px;
+					margin: 20px auto 0;
+					border-radius: 0.3em;
+					box-shadow: inset 2px 2px 4px 0 #cacbce, inset -2px -2px 4px #ffffff;
+					position: relative;
+					#openThread-comment-p{
+						display: inline-block;
+						width: 90%;
+						height: 80%;
+						margin-left: 20px;
+						color: gray;
+					}
+					#openThread-comment-name{
+						position: absolute;
+						display: inline-block;
+						transform: translate(-50%, -50%);
+						width: 30%;
+						height: 10%;
+						left: 90%;
+						top: 88%;
+						color: gray;
+					}
+				}
+				#friend_request_form{
+					width: 70%;
+					height: 60px;
+					margin: 20px auto 0;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					input{
+						width: 150px;
+						height: 50px;
+						background-color: $color-white;
+					    border: thin solid $color-white;
+						border-radius: 0.3em;
+						box-shadow:  -2px -2px 5px rgba(255, 255, 255, 1), 2.5px 2.5px 5px rgba(0, 0, 0, 0.1);
+						font-size: 16px;
+						color: crimson;
+					}
+				}
+				#openThread-message{
+					width: 70%;
+					height: 550px;
+					margin: 20px auto 0;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					#message{
+						width: 80%;
+						height: 40px;
+						margin-top: 5px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						font-size: 20px;
+						color: crimson;
+					}
+					#message-title{
+						width: 60%;
+						height: 30px;
+						margin-top: 10px;
+						padding-left: 10px;
+						padding-top: 5px;
+						background-color: $color-white;
+						border: thin solid $color-white;
+						border-radius: 0.3em;
+						box-shadow: inset 2px 2px 4px 0 #cacbce, inset -2px -2px 4px #ffffff;
+						font-size: 16px;
+						color: crimson;
+					}
+					#message-comment{
+						width: 80%;
+						height: 300px;
+						margin-top: 15px;
+						padding-left: 10px;
+						padding-top: 10px;
+						background-color: $color-white;
+						border: thin solid $color-white;
+						border-radius: 0.3em;
+						box-shadow: inset 2px 2px 4px 0 #cacbce, inset -2px -2px 4px #ffffff;
+						font-size: 18px;
+						color: crimson;
+					}
+					#send-message{
+						width: 40%;
+						height: 50px;
+						margin-top: 15px;
+						border: thin solid $color-white;
+						border-radius: 0.3em;
+					    box-shadow:  -2px -2px 5px rgba(255, 255, 255, 1), 2.5px 2.5px 5px rgba(0, 0, 0, 0.1);
+					}
+				}
+			}
+
+			#selectThread-contents{
+				width: 100%;
+	        	height: 60%;
+				margin-top: 40px;
+				//background-color: red;
+				#selectThread-form{
+					position: relative;
+					width: 75%;
+					height: 98%;
+					margin: auto;
+					background-color: $color-white;
+				    border-radius: 0.5em;
+					box-shadow: inset 3px 3px 6px 0 #cacbce, inset -4px -4px 6px #ffffff;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					.radio-title{
+						width: 180px;
+						height: 40px;
+						border-radius: 0.2em;
+						box-shadow: inset 1px 1px 4px 0 #cacbce, inset -1px -1px 4px #ffffff;
+						display:flex;
+						justify-content: center;
+						align-items: center;
+						p{
+							font-size: 22px;
+						    color: gray;
+						    text-shadow: #FFF;
+						}
+					}
+					#select-type-title{
+						margin-top: 35px;
+					}
+					#select-option-title{
+						margin-top: 55px;
+					}
+					.select-radio{
+						width: 350px;
+						height: 80px;
+						margin-top: 20px;
+						display: flex;
+						justify-content: space-between;
+						label{
+							font-weight: 100;
+							display: inline-block;
+							width: 80px;
+							line-height: 80px;
+							text-align: center;
+							color: gray;
+							border: thin solid $color-white;
+							background: #FFF;
+							background-color: $color-white;
+							border-radius: 50%;
+							box-shadow:  -2px -2px 5px rgba(255, 255, 255, 1), 2.5px 2.5px 5px rgba(0, 0, 0, 0.1);
+							transition: 200ms all;
+							cursor: pointer;
+						}
+						input[type="radio"]{
+							display: none;
+						}
+						input[type="radio"]:checked + label{
+							box-shadow: inset 2.5px 2.5px 5px 0 #cacbce, inset -2px -2px 5px #ffffff;
+							color: crimson;
+						}
+					}
+					#selectThreadBtn{
+						width: 200px;
+						height: 50px;
+						position: absolute;
+						top: 430px;
+						left: 50%;
+						transform: translateX(-50%);
+						border: thin solid $color-white;
+						background-color: $color-white;
+						box-shadow:  -2px -2px 5px rgba(255, 255, 255, 1), 2.5px 2.5px 5px rgba(0, 0, 0, 0.1);
+						font-family: 'Courier New', Courier, monospace;
+						font-size: 18px;
+						color: crimson;
+					}
+				}
+			}
+	        #repentance-contents{
+				width: 100%;
+	        	height: 60%;
+	        	display: flex;
+	        	flex-direction: column;
+				align-items: center;
+	        	.bell{
+					display: flex;
+					justify-content: space-between;
+					width: 70%;
+					height: 90px;
+					div{
+						display: flex;
+	    		        justify-content: center;
+						align-items: center;
+						border-radius: 0.5em;
+					}
+					.bell-open-icon{
+						width: 15%;
+						height: 80%;
+						margin-bottom: 2px;
+						div{
+							width: 85%;
+							height: 100%;
+							margin-left: 10px;
+							border-radius: 50%;
+							box-shadow:  -2px -2px 5px rgba(255, 255, 255, 1), 2.5px 2.5px 5px rgba(0, 0, 0, 0.1);
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							position: relative;
+							z-index: 0;
+							input{
+								display: inline-block;
+								position: absolute;
+								transform: translate(-50%, -50%);
+								top: 50%;
+								left: 50%;
+								width: 90%;
+								height: 90%;
+								border-radius: 50%;
+								background-color: $color-white;
+								border: thin solid $color-white;
+								z-index: 1;
+							}
+							i{
+								display: inline-block;
+								position: absolute;
+								transform: translate(-50%, -50%);
+								top: 36%;
+								left: 36%;
+								color: gray;
+								font-size: 22px;
+								pointer-events: none;
+								z-index: 2;
+							}
+						}
+					}
+					.bell-title{
+						width: 82%;
+						height: 80%;
+						box-shadow: inset 2px 2px 5px 0 #cacbce, inset -2px -2px 5px #ffffff;
+						font-size: 20px;
+						color: gray;
+					}
+				}
+				#open-bell{
+					width: 70%;
+					height: 100%;
+					position: relative;
+					form{
+						position: absolute;
+						width: 25px;
+						height: 25px;
+						transform: translate(-50%, -50%);
+						left: 95%;
+						input{
+							display: inline-block;
+							width: 100%;
+							height: 100%;
+							background-color: $color-white;
+							border: thin solid $color-white;
+						    display: flex;
+						    justify-content: center;
+						    align-items: center;
+							font-size: 25px;
+							color: gray;
+						}
+					}
+					#open-bell-title{
+						position: absolute;
+						transform: translate(-50%, -50%);
+						left: 50%;
+						width: 80%;
+						height: 40px;
+						top: 5%;
+						box-shadow: inset 2px 2px 5px 0 #cacbce, inset -2px -2px 5px #ffffff;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						color: crimson;
+						font-size: 18px;
+					}
+				    #open-bell-textarea{
+						position: absolute;
+						transform: translate(-50%, -50%);
+						left: 50%;
+						width: 80%;
+						height: 350px;
+						top: 55%;
+						box-shadow: inset 2px 2px 5px 0 #cacbce, inset -2px -2px 5px #ffffff;
+						display: flex;
+						flex-direction: column;
+						#open_bell_for_name{
+							display: inline-block;
+							margin: 17px;
+						}
+						#open_bell_comments{
+							display: inline-block;
+							margin: 0px 17px;
+							font-size: 16px;
+							color: crimson;
+						}
+					}
+					#open_bell_from_name{
+						position: absolute;
+						transform: translate(-50%, -50%);
+						top: 360px;
+						left: 445px;
+						font-size: 18px;
+						color: gray;
+					}
+					#open-bell-follow{
+						position: absolute;
+						transform: translate(-50%, -50%);
+						left: 50%;
+						width: 40%;
+						height: 40px;
+						top: 105%;
+						box-shadow:  -2px -2px 5px rgba(255, 255, 255, 1), 2.5px 2.5px 5px rgba(0, 0, 0, 0.1);
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						font-family: 'Courier New', Courier, monospace;
+						font-size: 18px;
+						color: crimson;
+					}
+				}
+			}
+			#friends-contents{
+				width: 100%;
+				height: 90%;
+				margin-top: 20px;
+				display: flex;
+	        	flex-direction: column;
+				align-items: center;
+				overflow: visible;
+				.friends-list{
+					width: 70%;
+					height: 70px;
+					margin: 20px auto 0;
+					display:flex;
+					.friends-name{
+						width: 70%;
+						height: 100%;
+						border-radius: 0.5em;
+						box-shadow: inset 2px 2px 5px 0 #cacbce, inset -2px -2px 5px #ffffff;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						font-size: 20px;
+						color: gray;
+					}
+					.friends-form{
+						width: 30%;
+						height: 100%;
+						display: flex;
+						div{
+							margin-left: 10px;
+							background-color: $color-white;
+							border: thin solid $color-white;
+							border-radius: 50%;
+							box-shadow:  -2px -2px 5px rgba(255, 255, 255, 1), 2.5px 2.5px 5px rgba(0, 0, 0, 0.1);
+						}
+						.friends-thread{
+							position: relative;
+							width: 42%;
+							height: 100%;
+							margin-left: 10px;
+							background-color: $color-white;
+							border: thin solid $color-white;
+							border-radius: 50%;
+							box-shadow:  -2px -2px 5px rgba(255, 255, 255, 1), 2.5px 2.5px 5px rgba(0, 0, 0, 0.1);
+							z-index: 0;
+							input{
+								display: inline-block;
+								position: absolute;
+								transform: translate(-50%, -50%);
+								top: 50%;
+								left: 50%;
+								width: 90%;
+								height: 90%;
+								border-radius: 50%;
+								background-color: $color-white;
+								border: solid thin $color-white;
+								z-index: 1;
+							}
+							i{
+								display: inline-block;
+								position: absolute;
+								transform: translate(-50%, -50%);
+								top: 50%;
+								left: 50%;
+								font-size: 20px;
+								color: gray;
+								pointer-events: none;
+								z-index: 2;
+							}
+						}
+						.friends-message{
+							width: 42%;
+							height: 100%;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							i{
+								display: inline-block;
+								font-size: 20px;
+								color: gray;
+								pointer-events: none;
+							}
+						}
+					}
+				}
+				#friends-message-form{
+					width: 70%;
+					height: 100%;
+					margin: 0 auto;
+					display: flex;
+					flex-direction: column;
+					position: relative;
+					#exit-friends-message-form{
+						position: absolute;
+						width: 40px;
+						height: 40px;
+						left: 85%;
+						display: flex;
+			            justify-content: center;
+						align-items: center;
+						p{
+							pointer-events: none;
+							font-size: 20px;
+						    color: gray;
+						}
+					}
+				    #friends-message-title{
+					    display: inline-block;
+					    width: 60%;
+					    height: 35px;
+						margin-left: 110px;
+						margin-top: 20px;
+						padding-left: 10px;
+						background-color: $color-white;
+						border: thin solid $color-white;
+						border-radius: 0.5em;
+						box-shadow: inset 2px 2px 5px 0 #cacbce, inset -2px -2px 5px #ffffff;
+						font-size: 15px;
+						color: crimson;
+				    }
+				    #friends-message-comments{
+					    display: inline-block;
+					    width: 60%;
+					    height: 250px;
+						margin-left: 110px;
+						margin-top: 20px;
+						padding-left: 10px;
+						padding-top: 10px;
+						background-color: $color-white;
+						border: thin solid $color-white;
+						border-radius: 0.5em;
+						box-shadow: inset 2px 2px 5px 0 #cacbce, inset -2px -2px 5px #ffffff;
+						font-size: 16px;
+					    color: crimson;
+				    }
+				    #friends-message-submit{
+					    display: inline-block;
+					    width: 30%;
+					    height: 50px;
+						margin-left: 190px;
+						margin-top: 20px;
+						background-color: $color-white;
+						border: thin solid $color-white;
+						border-radius: 0.3em;
+						box-shadow: -2px -2px 4px rgba(255, 255, 255, 1), 2px 2px 4px rgba(0, 0, 0, 0.1);
+				    }
+				}
+				#friends-profile{
+					width: 70%;
+					height: 70%;
+					margin: 0 auto 0;
+					display: flex;
+					flex-direction: column;
+					position: relative;
+					//box-shadow: inset 2px 2px 5px 0 #cacbce, inset -2px -2px 5px #ffffff;
+					#friends-exit{
+						width: 30px;
+						height: 30px;
+						position: absolute;
+						top: 7.5%;
+						left: 85%;
+						display:flex;
+						justify-content: center;
+						align-items: center;
+					    input{
+							background-color: $color-white;
+							border: solid thin $color-white;
+							font-size: 28px;
+						    color: gray;
+						}
+					}
+					#friends-profile-name{
+						width: 50%;
+						height: 50px;
+						margin: 30px auto 20px;
+						border-radius: 0.3em;
+						box-shadow: inset 2px 2px 5px 0 #cacbce, inset -2px -2px 5px #ffffff;
+						display:flex;
+						justify-content: center;
+						align-items: center;
+						font-size: 21px;
+						color: gray;
+					}
+					#friends-profile-contents{
+						width: 80%;
+						height: 60%;
+						margin: 0 auto;
+						border-radius: 0.3em;
+						box-shadow: inset 2px 2px 5px 0 #cacbce, inset -2px -2px 5px #ffffff;
+						#friends-profile-data{
+							width: 80%;
+							height: 80%;
+							//background-color: red;
+							margin: 0 10%;
+							padding-top: 3%;
+							display: flex;
+							flex-direction: column;
+							p{
+								display: inline-block;
+								margin: 15px 0 0 5px;
+								font-size: 20px;
+								color: gray;
+
+							}
+						}
+					}
+					#friends-profile-open{
+						width: 30%;
+						height: 40px;
+						margin: 30px auto 0;
+						box-shadow: $blue-out;
+						display:flex;
+						justify-content: center;
+					    align-items: center;
+					}
+				}
+			}
+			#addThread-contents{
+				width: 100%;
+	        	height: 60%;
+				margin-top: 30px;
+				#thread-form{
+					display: flex;
+				    flex-direction: column;
+					align-items: center;
+					p{
+						display: inline-block;
+						font-size: 18px;
+						color: gray;
+					}
+					#thread-title{
+						width: 300px;
+						height: 30px;
+						padding-left: 8px;
+						padding-top: 2px;
+						background-color: $color-white;
+						border: thin solid $color-white;
+						border-radius: 0.5em;
+						box-shadow: inset 2px 2px 4px 0 #cacbce, inset -2px -2px 4px #ffffff;
+						font-size: 15px;
+						color: firebrick;
+					}
+					#thread-comment{
+						width: 400px;
+						height: 220px;
+						padding-left: 10px;
+						padding-top: 12px;
+						background-color: $color-white;
+						border: thin solid $color-white;
+						border-radius: 0.5em;
+						box-shadow: inset 3px 3px 6px 0 #cacbce, inset -4px -4px 6px #ffffff;
+						font-size: 15px;
+						color: firebrick;
+					}
+					.addRadio{
+						width: 400px;
+						height: 45px;
+						display: flex;
+						justify-content: space-between;
+						input{
+							display: none;
+						}
+						label{
+							display: inline-block;
+							width: 31%;
+							height: 100%;
+							border-radius: 0.3em;
+							box-shadow: -2px -2px 4px rgba(255, 255, 255, 1), 2px 2px 4px rgba(0, 0, 0, 0.1);
+							color: gray;
+							display:flex;
+						    justify-content: center;
+						    align-items: center;
+						}
+						input:checked + label{
+							box-shadow: inset 2px 2px 4px 0 #cacbce, inset -2px -2px 4px #ffffff;
+							color: crimson;
+						}
+					}
+					#addType{
+						margin-top: 20px;
+					}
+					#addOption{
+						 margin-top: 15px;
+					}
+					#addThreadBtn{
+						width: 200px;
+						height: 80px;
+						margin-top: 30px;
+						background-color: $color-white;
+						border: thin solid $color-white;
+						border-radius: 1.5em;
+						box-shadow:  -3px -3px 6px rgba(255, 255, 255, 1), 3px 3px 6px rgba(0, 0, 0, 0.1);
+						font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+						color: crimson;
+					}
+				}
+			}
+	        .main-footer{
+	       	    width: 100%;
+	       	    height: 20%;
+	        }
+	    }
+	}
+    .right-body{
+    	width: 23%;
+		height: 700px;
+		background-color: $color-white;
+    	//border-left: solid thin silver;
+	}
+	#AfterEntry{
+		position: relative;
+		div{
+			left: 50%;
+			transform: translate(-50%, -50%);
+			position: absolute;
+		}
+		#user-stutas{
+			width: 70%;
+			height: 55%;
+			top: 40%;
+			border-radius: 1em;
+			box-shadow: inset 3px 3px 6px 0 #cacbce, inset -3px -3px 6px #ffffff;
+			position: relative;
+			p{
+				display: inline-block;
+				position: absolute;
+				color: gray;
+			}
+			#user-name{
+				transform: translate(-50%, -50%);
+				top: 35px;
+				left: 50%;
+			}
+			#user-gender{
+				top: 80px;
+				left: 10%;
+			}
+			#user-age{
+				top: 110px;
+				left: 10%;
+			}
+			#favorite-music{
+				top: 180px;
+				left: 10%;
+			}
+			#favorite-instrument{
+				top: 210px;
+				left: 10%;
+			}
+			#favorite-musician{
+				top: 240px;
+				left: 10%;
+			}
+
+		}
+
+		#addThread{
+			width: 40%;
+			height: 5%;
+			top: 73%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 0.3em;
+			background-color: $color-white;
+			box-shadow:  -3px -3px 6px rgba(255, 255, 255, 1), 3px 3px 6px rgba(0, 0, 0, 0.1);
+		}
+	}
+	#BeforeEntry{
+		position: relative;
+		.entryBtn{
+			width: 40%;
+			height: 15%;
+			//border: thin solid black;
+			background-color: $color-white;
+			border-radius: 0.5em;
+			box-shadow: $blue-out;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#signinBtn{
+			top: 35%;
+			p{
+				color: gray;
+				pointer-events: none;
+			}
+		}
+		#signupBtn{
+			top: 60%;
+			p{
+				color: gray;
+				pointer-events: none;
+			}
+		}
+	}
+	#Entryform{
+		#entry-form{
+			position: relative;
+			width: 100%;
+			height: 100%;
+		    #EntryformExit{
+			    width: 50px;
+			    height: 50px;
+			    position: absolute;
+			    top: 5%;
+				left: 85%;
+				font-size: 25px;
+				color: gray;
+			    p{
+				   pointer-events: none;
+			    }
+			}
+			#entry-form-title{
+				display: inline-block;
+				position: absolute;
+				transform: translate(-50%, -50%);
+				top: 17%;
+				left: 50%;
+				font-size: 32px;
+			    color: gray;
+			}
+			.entry-form-box{
+				position: absolute;
+				transform: translate(-50%, -50%);
+			    width: 80%;
+				height: 70%;
+				//background-color: gray;
+				left: 50%;
+				top: 60%;
+				display: flex;
+			    flex-direction: column;
+			}
+		    #first-entry-form{
+				#account-name-p{
+					display: inline-block;
+					width: 35%;
+					margin: 80px auto 0;
+				}
+				#account-name{
+					display: inline-block;
+					width: 50%;
+					height: 22px;
+					margin: 8px auto 0;
+					background-color: $color-white;
+			        border: thin solid $color-white;
+			        border-radius: 0.3em;
+			        box-shadow: inset 1px 1px 2px 0 #cacbce, inset -1px -1px 2px #ffffff;
+			        padding-top: 1%;
+					padding-left: 3%;
+					font-size: 14px;
+			        color: firebrick;
+				}
+				#account-name-attention{
+					display: inline-block;
+					width: 40%;
+					margin: 80px auto 0;
+					color: crimson;
+				}
+				#Entryform-submit{
+					display: inline-block;
+					width: 50%;
+					height: 40px;
+					margin: 10px auto 0;
+					background-color: $color-white;
+			        border: thin solid $color-white;
+			        border-radius: 0.3em;
+					box-shadow:  1px 1px 5px rgba(255, 255, 255, 1) inset, 2px 2px 4px rgba(0, 0, 0, 0.1);
+					font-size: 15px;
+					color: crimson;
+				}
+		    }
+		    #seccond-entry-form{
+				#seccond-entry-title{
+					width: 30%;
+					height: 20px;
+					margin: 10px auto 0;
+					font-size: 18px;
+				}
+				#entry-gender{
+					display: inline-block;
+					margin: 20px 0 0 30px;
+					#entry-gender-p{
+						color: crimson;
+					}
+					.entry-gender-radio{
+						color: gray;
+				    }
+				}
+				#entry-age{
+					margin: 20px 0 0 30px;
+					color: crimson;
+				}
+				#entry-age-select{
+					width: 30%;
+					height: 18px;
+					padding-left: 13px;
+					cursor: pointer;
+					text-overflow: ellipsis;
+					border: none;
+					outline: none;
+					-webkit-appearance: none;
+					appearance: none;
+					background: transparent;
+					background-image: none;
+					background-color: $color-white;
+			        border: thin solid $color-white;
+			        border-radius: 0.5em;
+					box-shadow: inset 1px 1px 2px 0 #cacbce, inset -1px -1px 2px #ffffff;
+					color: crimson;
+				}
+				#entry-music-type-p{
+					width: 35%;
+					height: 20px;
+					margin: 15px auto 0;
+					color: crimson;
+				}
+				#entry-music-type-box{
+					width: 80%;
+					height: 20px;
+					margin: 25px auto 0;
+					color: gray;
+				}
+				.entry-music-type{
+
+				}
+				#entry-instrument-p{
+					width: 30%;
+					height: 20px;
+					margin: 20px auto 0;
+					color: crimson;
+				}
+				#entry-instrument{
+					width: 70%;
+					height: 18px;
+					margin: 3px auto;
+					background-color: $color-white;
+			        border: thin solid $color-white;
+			        border-radius: 0.5em;
+			        box-shadow: inset 1px 1px 2px 0 #cacbce, inset -1px -1px 2px #ffffff;
+			        padding-top: 1%;
+			        padding-left: 3%;
+				}
+				#entry-favorite-musician-p{
+					width: 48%;
+					height: 20px;
+					margin: 20px auto 0;
+					color: crimson;
+				}
+				#entry-favorite-musician{
+					width: 70%;
+					height: 18px;
+					margin: 3px auto ;
+					background-color: $color-white;
+			        border: thin solid $color-white;
+			        border-radius: 0.5em;
+			        box-shadow: inset 1px 1px 2px 0 #cacbce, inset -1px -1px 2px #ffffff;
+			        padding-top: 1%;
+			        padding-left: 3%;
+				}
+				#entry-password-p{
+					width: 25%;
+					height: 20px;
+					margin: 20px auto 0;
+					color: crimson;
+				}
+				#entry-password{
+					width: 50%;
+					height: 18px;
+					margin: 3px auto ;
+					background-color: $color-white;
+			        border: thin solid $color-white;
+			        border-radius: 0.5em;
+			        box-shadow: inset 1px 1px 2px 0 #cacbce, inset -1px -1px 2px #ffffff;
+			        padding-top: 1%;
+			        padding-left: 3%;
+				}
+				#entry-seccond-submit{
+					width: 40%;
+					height: 25px;
+					margin: 30px auto ;
+					border: thin solid $color-pink;
+			        border-radius: 0.2em;
+			        background-color: $color-pink;
+			        box-shadow: -2px -2px 5px #fff0e8, 2px 2px 5px #d0b2ac;
+			        font-size: 15px;
+			        color: gray;
+				}
+			}
+		}
+	}
+	#Loginform{
+		position: relative;
+		#EntryformExit{
+			width: 35px;
+			height: 35px;
+			position: absolute;
+			top: 5%;
+			left: 85%;
+			font-size: 25px;
+			p{
+				pointer-events: none;
+			}
+		}
+		#loginform-title{
+			display: inline-block;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			top:17%;
+			left: 50%;
+			font-size: 32px;
+			color: gray;
+		}
+		p{
+			display: inline-block;
+			position: absolute;
+			transform: translate(-50%, -50%);
+			left: 50%;
+			color: gray;
+		}
+		#account-name-p{
+			top: 31%;
+		}
+		#account-name{
+			position: absolute;
+			width: 45%;
+			height: 3%;
+			transform: translate(-50%, -50%);
+			top: 38%;
+			left: 50%;
+			background-color: $color-white;
+			border: thin solid $color-white;
+			border-radius: 0.5em;
+			box-shadow: inset 1px 1px 2px 0 #cacbce, inset -1px -1px 2px #ffffff;
+			padding-top: 1%;
+			padding-left: 2%;
+			color: firebrick;
+		}
+		#account-password-p{
+			top: 44%;
+		}
+		#account-password{
+			position: absolute;
+			width: 45%;
+			height: 3%;
+			transform: translate(-50%, -50%);
+			top: 50%;
+			left: 50%;
+			background-color: $color-white;
+			border: thin solid $color-white;
+			border-radius: 0.5em;
+			box-shadow: inset 1px 1px 2px 0 #cacbce, inset -1px -1px 2px #ffffff;
+			padding-top: 1%;
+			padding-left: 2%;
+		}
+		#LoginFalse{
+			top: 55%;
+			color: crimson;
+		}
+		#Loginform-submit{
+			position: absolute;
+			transform: translate(-50%, -50%);
+			width: 50%;
+			height: 13%;
+			top: 67%;
+			left: 50%;
+			border: thin solid $color-white;
+			border-radius: 0.5em;
+			background-color: $color-white;
+			box-shadow: $blue-out;
+			font-size: 18px;
+			color: gray;
+		}
+	}
+}

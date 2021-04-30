@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+body{
+	margin: 0;
+}
+#scene{
+	perspective: 1000px;
+	width: 200px;
+	height: 200px;
+	position: relative;
+	top: 50vh;
+	left: 50vh;
+	transform: translateX(-50%) translateY(-50%);
+}
+.boxBase{
+	transform-style: preserve-3d;
+	width: 200px;
+	height: 200px;
+	animation: turnAround 30s linear 0s infinite normal none running;
+}
+@keyframes turnAround{
+	0%{
+	transform: rotateX(0deg) rotateY(0deg);
+	}
+	100%{
+	 transform: rotateX(360deg) rotateY(360deg);
+	}
+}
+.boxBase > div{
+	position: absolute;
+	background-color: rgba(100, 100, 100, 0.7);
+	border: 0.5px solid black;
+	width: 100px;
+	height: 100px;
+}
+.boxBase > .top{
+	transform: tanslateY(100px) rotateX(-90deg);
+}
+	        	    .boxBase > .bottom{
+	        	  	    transform: translateY(-100px) rotateX(90deg);
+	        	    }
+	        	    .boxBase > .front{
+	        	 	    transform: translateZ(100px);
+	        	    }
+	        	    .boxBase > .back{
+	        	    	transform: translateZ(-100px) rotateX(180deg);
+	        	    }
+	        	    .boxBase > .left{
+	        	    	transform: translateX(-100px) rotateY(-90deg);
+	        	    }
+	        	    .boxBase > .right{
+	        	    	transform: translateX(100px) rotateY(90deg);
+	        	    }
+
+
